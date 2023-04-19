@@ -1,0 +1,102 @@
+body{
+    background-attachment: fixed;
+    /* background: linear-gradient(to bottom left, #000, #330055); */
+    background-image: url(https://st4.depositphotos.com/22147408/23658/i/600/depositphotos_236587792-stock-photo-abstract-colorful-pattern-for-background.jpg);
+}
+.SideBar__NavSup{
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px auto 20px;
+    padding: 20px 0;
+    
+    border: solid 1px rgba(255, 255, 255, .5);
+    background-color: rgba(255, 255, 255, 0.116);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+}
+
+
+.SideBar__NavSup li{
+    text-decoration: none;
+    list-style: none;
+    width: 25%;
+    min-width: 200px;
+    text-align: center;
+    
+}
+.SideBar__NavSup a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+}
+footer{
+    display: flex;
+    background-color: #000;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: #fff;
+    margin: 20px 0 0 0;
+}
+.section__contacto{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+}
+.main-container{
+    margin: auto;
+    width: 95%;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.routes-container{
+    color: #fff;
+    width: 45%;
+    border: solid 1px rgba(255, 255, 255, .5);
+    background-color: rgba(255, 255, 255, 0.116);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+}
+.totales-container{
+    color: #fff;
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.productos-totales{
+    margin: 10px 0;
+    border: solid 1px rgba(255, 255, 255, .5);
+    background-color: rgba(255, 255, 255, 0.116);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+}
+.productos-totales p{
+    font-size: 1.2rem;
+    padding: 0 0 0 20px;
+}
+.categorias-totales{
+    border: solid 1px rgba(255, 255, 255, .5);
+    background-color: rgba(255, 255, 255, 0.116);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    padding: 10px;
+
+}
+.categorias-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 11px;
+}
+.categorias-container p{
+    margin: 2px;
+}
