@@ -12,7 +12,7 @@ import Totales from "../components/Totales"
     function SideBar(){
         return (
           <React.Fragment>
-            <header>
+            <section>
               <ul className="SideBar__NavSup">
               <li>
                   <Link to="/">Inicio</Link>
@@ -28,7 +28,7 @@ import Totales from "../components/Totales"
                 </li>
               </ul>
              
-            </header>
+            </section>
             <main>
             <div className='main-container'>
               <section className='routes-container'>
@@ -45,17 +45,7 @@ import Totales from "../components/Totales"
               </section>
             </div>
             </main>
-            <footer>
-              <article className="section__contacto">
-                <h4>Contacto: </h4>
-                <a href="">Preguntas Frecuentes</a>
-                <a href="">Terminos y condiciones</a>
-                <a href="">Nosotros</a>
-              </article>
-              <p className="footer__copiright">
-                GLEMS SRL © 2022. Todos los Derechos Reservados.
-              </p>
-            </footer>
+            
           </React.Fragment>
         );
     }

@@ -3,6 +3,25 @@ body{
     /* background: linear-gradient(to bottom left, #000, #330055); */
     background-image: url(https://st4.depositphotos.com/22147408/23658/i/600/depositphotos_236587792-stock-photo-abstract-colorful-pattern-for-background.jpg);
 }
+header{
+    margin-top: 45px;
+    width: 100%;
+    height: 95px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-container{
+    width: 220px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-container img{
+    overflow: hidden;
+}
 .SideBar__NavSup{
     width: 95%;
     display: flex;
