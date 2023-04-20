@@ -21,12 +21,16 @@ function Inicio(){
       }, [])
 
       let infProduct;
+      
       if(products === "") {
-        infProduct = <p> Cargando... </p>
+        infProduct = <p className='cargando__container'>Cargando..
+          <p className='cargando-logo'></p></p>
       } else {
         infProduct = 
-            <div>
-                <p>{products.name}</p><p> ({products.categoria_desc})</p><a href={products.detail} target="_blank">Ver</a>
+            <div className='ultimo-producto__container'>
+                <div className='ultimo-producto__info'>
+                <p>{products.name} ({products.categoria_desc})</p><a href={products.detail} target="_blank">Ver</a>
+                </div>
                 <div className='product-image__container'>
                 <img src={products.image} alt='imagen'/>
                 </div>
