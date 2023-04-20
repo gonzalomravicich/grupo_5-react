@@ -12,6 +12,8 @@ import Totales from "../components/Totales"
     function SideBar(){
         return (
           <React.Fragment>
+          
+            <main className='main-container'>
             <section>
               <ul className="SideBar__NavSup">
               <li>
@@ -29,8 +31,7 @@ import Totales from "../components/Totales"
               </ul>
              
             </section>
-            <main>
-            <div className='main-container'>
+            <div className='main__routes'>
               <section className='routes-container'>
               <Routes>
                   <Route exact path='/' element= {<Inicio/>} />

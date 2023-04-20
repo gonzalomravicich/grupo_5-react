@@ -22,18 +22,24 @@ header{
 .logo-container img{
     overflow: hidden;
 }
+.main-container{
+    display: flex;
+    margin: 20px auto;
+}
 .SideBar__NavSup{
-    width: 95%;
+    padding-left: 0;
+    height: 100%;
+    margin: auto;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-around;
-    align-items: center;
-    margin: 40px auto 20px;
-    padding: 20px 0;
+    align-content: center;
     
     border: solid 1px rgba(255, 255, 255, .5);
     background-color: rgba(255, 255, 255, 0.116);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
     border-radius: 5px;
 }
 
@@ -57,7 +63,6 @@ footer{
     flex-wrap: wrap;
     justify-content: space-around;
     color: #fff;
-    margin: 20px 0 0 0;
 }
 .section__contacto{
     width: 100%;
@@ -66,7 +71,7 @@ footer{
     align-items: center;
     padding: 5px;
 }
-.main-container{
+.main__routes{
     margin: auto;
     width: 95%;
     height: 600px;
@@ -118,4 +123,13 @@ footer{
 }
 .categorias-container p{
     margin: 2px;
+}
+.product-image__container{
+    margin: auto;
+    width: 90%;
+    object-position: center;
+    object-fit: cover;
+}
+.product-image__container img{
+    width: 100%;
 }

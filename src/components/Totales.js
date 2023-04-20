@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState, useEffect, useRef} from 'react';
+import {useState, useEffect} from 'react';
 function Totales(){
     const [products, setProducts] = useState(""); 
     const [categories, setCategories] = useState(""); 
@@ -21,15 +21,15 @@ function Totales(){
       }
 
       useEffect(() => {
-        console.log("Test por hooks montado");
+        console.log("Componente montado");
         buscarProduct();
       }, [])
       
-      let infPoduct;
+      let infProduct;
       if(products === "") {
-        infPoduct = <p> Cargando... </p>
+        infProduct = <p> Cargando... </p>
       } else {
-        infPoduct = <p> Productos Totales : {products}</p>
+        infProduct = <p> Productos Totales : {products}</p>
       }
       
       let infCategory;
@@ -44,7 +44,7 @@ function Totales(){
 
     return (
       <React.Fragment>
-        <div className='productos-totales'>{infPoduct}</div>
+        <div className='productos-totales'>{infProduct}</div>
 
         <div className="categorias-totales">
           <h2>Categorias ({catTotal}): </h2>
