@@ -36,8 +36,8 @@ function Totales(){
       if(categories === "") {
         infCategory = <p> Cargando... </p>
       } else {
-        let catg = categories.map((cat)=>{
-          return <p>{cat.desc.toUpperCase()} ({cat.total_productos})</p>
+        let catg = categories.map((cat, i)=>{
+          return <p key={i}> {cat.desc.toUpperCase()} ({cat.total_productos})</p>
         })
         infCategory = <div className='categorias-container'>{catg}</div>
       }

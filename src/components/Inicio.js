@@ -23,8 +23,8 @@ function Inicio(){
       let infProduct;
       
       if(products === "") {
-        infProduct = <p className='cargando__container'>Cargando..
-          <p className='cargando-logo'></p></p>
+        infProduct = <div className='cargando__container'>Cargando.. 
+          <p className='cargando-logo'></p> </div>
       } else {
         infProduct = 
             <div className='ultimo-producto__container'>
