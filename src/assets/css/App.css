@@ -89,7 +89,7 @@ footer{
     height: 600px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .routes-container{
@@ -191,14 +191,27 @@ footer{
   } 
 
   .image-profile__container {
-    width: 20%;
-  border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
   }
 .image-profile__container img {
- height: 100%;
+    height: 100%;
     border-radius: 50%;
     object-position: center;
     object-fit: cover;
     max-width: 100%;
-    padding-right: 10px;
+}
+
+.fila__usuario{
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px #000;
+    margin: 8px;
+    justify-content: space-between;
+}
+.lista-usuarios__container{
+    padding: 10px;
 }

@@ -31,7 +31,7 @@ let infUsers;
       } else{
         
        let user1 = users.map((user) =>{
-        return<tr> <td className='image-profile__container' ><img  src={user.imageProfile} ></img> </td>
+        return<tr className='fila__usuario'> <td><div className='image-profile__container'><img  src={user.imageProfile} ></img></div> </td>
             <td >{user.firstName.toUpperCase()} </td>
             <td >{user.lastName.toUpperCase()} </td>
             <td >{user.email}</td>
