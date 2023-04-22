@@ -27,17 +27,17 @@ function Totales(){
       
       let infProduct;
       if(products === "") {
-        infProduct = <p> Cargando... </p>
+        infProduct = <div> Cargando... <p className='cargando-logo'></p></div>
       } else {
         infProduct = <h2> Productos Totales : {products}</h2>
       }
       
       let infCategory;
       if(categories === "") {
-        infCategory = <p> Cargando... </p>
+        infCategory = <div> Cargando... <p className='cargando-logo'></p></div>
       } else {
         let catg = categories.map((cat, i)=>{
-          return <p key={i}> {cat.desc.toUpperCase()} ({cat.total_productos})</p>
+          return <p className='productos-totales__categorias' key={i}> {cat.desc.toUpperCase()} ({cat.total_productos})</p>
         })
         infCategory = <div className='categorias-container'>{catg}</div>
       }
