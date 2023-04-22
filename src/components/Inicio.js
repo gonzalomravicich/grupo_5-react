@@ -28,6 +28,7 @@ function Inicio(){
       } else {
         infProduct = 
             <div className='ultimo-producto__container'>
+                <h2>Último producto agregado</h2>
                 <div className='ultimo-producto__info'>
                 <p>{products.name} ({products.categoria_desc})</p><a href={products.detail} target="_blank">Ver</a>
                 </div>

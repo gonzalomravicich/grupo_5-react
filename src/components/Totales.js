@@ -29,7 +29,7 @@ function Totales(){
       if(products === "") {
         infProduct = <p> Cargando... </p>
       } else {
-        infProduct = <p> Productos Totales : {products}</p>
+        infProduct = <h2> Productos Totales : {products}</h2>
       }
       
       let infCategory;

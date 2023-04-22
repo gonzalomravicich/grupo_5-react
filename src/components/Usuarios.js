@@ -30,15 +30,16 @@ let infUsers;
           <p className='cargando-logo'></p> </div>
       } else{
         
-       let user1 = users.map((user) =>{
-        return<tr className='fila__usuario'> <td><div className='image-profile__container'><img  src={user.imageProfile} ></img></div> </td>
+       let user1 = users.map((user, i) =>{
+        return<tr key={i} className='fila__usuario'> 
+            <td><div className='image-profile__container'><img  src={user.imageProfile} ></img></div> </td>
             <td >{user.firstName.toUpperCase()} </td>
             <td >{user.lastName.toUpperCase()} </td>
             <td >{user.email}</td>
         </tr>
       
        })
-       infUsers = <div className='lista-usuarios__container'> {user1}</div>
+       infUsers = <div className='lista-usuarios__container'><h2>Usuarios</h2> {user1}</div>
       }
 
 // console.log(users);
