@@ -7,12 +7,12 @@
 }
 
     body{
-        background: linear-gradient(270deg, var(--violeta-oscuro), var(--violeta-claro), var(--beige-claro));
+        background: linear-gradient(270deg, var(--violeta-oscuro), var(--beige-claro),  var(--violeta-oscuro));
        background-size: 600% 600%;
    
-       -webkit-animation: animacion1 20s ease infinite;
-       -moz-animation: animacion2 20s ease infinite;
-       animation: animacion3 20s ease infinite;
+       -webkit-animation: animacion1 15s ease infinite;
+       -moz-animation: animacion2 15s ease infinite;
+       animation: animacion3 15s ease infinite;
    }
    
    @-webkit-keyframes animacion1 {
@@ -131,6 +131,13 @@ h2{
     flex-direction: column;
     justify-content: flex-start;
 }
+.productos-totales__container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    height: 30%;
+    flex-wrap: wrap;
+}
 .productos-totales{
     margin: 0 0 10px 0;
     color: var(--violeta-oscuro);
@@ -138,7 +145,27 @@ h2{
     background-color: rgba(255, 255, 255, 0.63);
     backdrop-filter: blur(5px);
     border-radius: 5px;
+    width: 43%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+.productos-totales h2{
+    font-size: 40px;
+    padding-left: 25px;
+}
+.productos-totales i{
+    font-size: 30px;
+    padding: 0 20px;
+}
+.productos-totales p{
+    margin: 4px 0 15px 0;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 20px;
+}
+
 .productos-totales .productos-totales__categorias{
     font-size: 1.2rem;
     padding: 0 0 0 20px;
