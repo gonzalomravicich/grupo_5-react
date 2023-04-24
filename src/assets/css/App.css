@@ -5,11 +5,32 @@
     --violeta-claro:#dad3ed;
     --blanco:#fffffc; 
 }
-body{
-    background-attachment: fixed;
-    background: rgb(82,64,128);
-background: radial-gradient(circle, rgba(82,64,128,1) 8%, rgba(218,211,237,1) 61%, rgba(237,235,211,1) 100%);
-}
+
+    body{
+        background: linear-gradient(270deg, var(--violeta-oscuro), var(--violeta-claro), var(--beige-claro));
+       background-size: 600% 600%;
+   
+       -webkit-animation: animacion1 20s ease infinite;
+       -moz-animation: animacion2 20s ease infinite;
+       animation: animacion3 20s ease infinite;
+   }
+   
+   @-webkit-keyframes animacion1 {
+       0%{background-position:0% 50%}
+       50%{background-position:100% 50%}
+       100%{background-position:0% 50%}
+   }
+   @-moz-keyframes animacion2 {
+       0%{background-position:0% 50%}
+       50%{background-position:100% 50%}
+       100%{background-position:0% 50%}
+   }
+   @keyframes animacion3 {
+       0%{background-position:0% 50%}
+       50%{background-position:100% 50%}
+       100%{background-position:0% 50%}
+   }
+
 header{
     margin: auto;
     width: 97%;
@@ -77,6 +98,10 @@ h2{
     color: var(--violeta-oscuro);
 
     font-size: 1.3rem;
+}
+.SideBar__NavSup a:hover{
+    font-weight: bold;
+    color: #000;
 }
 
 .main__routes{
