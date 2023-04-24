@@ -5,7 +5,6 @@ import {Link, Route, Routes, Switch} from "react-router-dom"
 import Inicio from "../components/Inicio"
 import Productos from "../components/Productos"
 import Usuarios from "../components/Usuarios"
-import Categorias from "../components/Categorias"
 import Totales from "../components/Totales"
 import logo from "../assets/images/Logo.png"
 
@@ -32,9 +31,6 @@ import logo from "../assets/images/Logo.png"
                     <li>
                       <Link to="usuarios">Usuarios</Link>
                     </li>
-                    <li>
-                      <Link to="categorias">Categorias</Link>
-                    </li>
                   </ul>
                 
                 </section>
@@ -44,7 +40,6 @@ import logo from "../assets/images/Logo.png"
                       <Route exact path='/' element= {<Inicio/>} />
                       <Route  path='/productos' element = {<Productos/>} />
                       <Route path='/usuarios'  element={<Usuarios/>} />
-                      <Route  path='/categorias' element= {<Categorias/>} />
                       {/* <Route  path='*' element={<Error404/>}/> */}
                   </Routes>
                   </section>

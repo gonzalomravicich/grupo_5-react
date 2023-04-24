@@ -1,12 +1,10 @@
 import React from 'react';
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useRef} from 'react';
 function Totales(){
     const [products, setProducts] = useState(""); 
     const [categories, setCategories] = useState(""); 
     const [catTotal, setcatTotal] = useState("");
-   
-    
-    
+
     const buscarProduct = () => {
         fetch("http://localhost:3000/api/product/allProducts")
         .then(response => (response.json()))
@@ -18,8 +16,8 @@ function Totales(){
         .catch(error => {
           console.log(error)
         })
-      }
-
+    }    
+      
       useEffect(() => {
         console.log("Componente montado");
         buscarProduct();
@@ -36,8 +34,16 @@ function Totales(){
       if(categories === "") {
         infCategory = <div> Cargando... <p className='cargando-logo'></p></div>
       } else {
+        let porcentaje;
         let catg = categories.map((cat, i)=>{
-          return <p className='productos-totales__categorias' key={i}> {cat.desc.toUpperCase()} ({cat.total_productos})</p>
+          porcentaje = (cat.total_productos * 100) / catTotal;
+          return <div>
+                    <p className='productos-totales__categorias' key={i}> {cat.desc.toUpperCase()} ({cat.total_productos})</p>
+                    <div class="categorias__progress">
+                      <div class="categorias__progress-bar" style={{width: porcentaje + "%"}}>
+                      </div>
+                    </div>
+                  </div>
         })
         infCategory = <div className='categorias-container'>{catg}</div>
       }

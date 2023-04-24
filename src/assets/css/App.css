@@ -7,8 +7,8 @@
 }
 body{
     background-attachment: fixed;
-    /* background: linear-gradient(to bottom left, #000, #330055); */
-    background-image: url(https://st4.depositphotos.com/22147408/23658/i/600/depositphotos_236587792-stock-photo-abstract-colorful-pattern-for-background.jpg);
+    background: rgb(82,64,128);
+background: radial-gradient(circle, rgba(82,64,128,1) 8%, rgba(218,211,237,1) 61%, rgba(237,235,211,1) 100%);
 }
 header{
     margin: auto;
@@ -35,7 +35,7 @@ h2{
     overflow: hidden;
 }
 .main-container{
-     margin: 20px 20px;
+     margin: 28px 28px;
     border: solid 1px rgba(255, 255, 255, .5);
     background-color: rgba(255, 255, 255, 0.43);
     backdrop-filter: blur(8px);
@@ -52,9 +52,10 @@ h2{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-content: center;
-    
+
+
     border: solid 1px rgba(255, 255, 255, .5);
     background-color: rgba(255, 255, 255, 0.63);
     backdrop-filter: blur(8px);
@@ -65,10 +66,11 @@ h2{
 .SideBar__NavSup li{
     text-decoration: none;
     list-style: none;
-    width: 25%;
-    min-width: 200px;
+    min-width: 150px;
     text-align: center;
-    
+    margin: 20px 17px;
+    padding-bottom: 10px;
+    box-shadow: 0px 2px 2px var(--violeta-claro);
 }
 .SideBar__NavSup a{
     text-decoration: none;
@@ -105,7 +107,7 @@ h2{
     justify-content: flex-start;
 }
 .productos-totales{
-    margin: 10px 0;
+    margin: 0 0 10px 0;
     color: var(--violeta-oscuro);
     border: solid 1px rgba(255, 255, 255, .5);
     background-color: rgba(255, 255, 255, 0.63);
@@ -133,6 +135,21 @@ h2{
 }
 .categorias-container p{
     margin: 2px;
+}
+.categorias__progress {
+    height: 20px;
+    width: 80%;
+    border: 1px solid var(--violeta-oscuro);
+    border-radius: 5px;
+    background-color: var(--beige-claro);
+    margin-bottom: 8px;
+}
+ 
+.categorias__progress-bar {
+    height: 100%;
+    background: var(--violeta-oscuro);
+    display: flex;
+    border-radius: 5px;
 }
 .ultimo-producto__container{
     display: flex;
