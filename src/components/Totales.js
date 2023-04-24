@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState, useEffect, useRef} from 'react';
+import {useState, useEffect} from 'react';
 function Totales(){
     const [products, setProducts] = useState(""); 
     const [categories, setCategories] = useState(""); 
@@ -21,30 +21,30 @@ function Totales(){
       }
 
       useEffect(() => {
-        console.log("Test por hooks montado");
+        console.log("Componente montado");
         buscarProduct();
       }, [])
       
-      let infPoduct;
+      let infProduct;
       if(products === "") {
-        infPoduct = <p> Cargando... </p>
+        infProduct = <div> Cargando... <p className='cargando-logo'></p></div>
       } else {
-        infPoduct = <p> Productos Totales : {products}</p>
+        infProduct = <h2> Productos Totales : {products}</h2>
       }
       
       let infCategory;
       if(categories === "") {
-        infCategory = <p> Cargando... </p>
+        infCategory = <div> Cargando... <p className='cargando-logo'></p></div>
       } else {
-        let catg = categories.map((cat)=>{
-          return <p>{cat.desc.toUpperCase()} ({cat.total_productos})</p>
+        let catg = categories.map((cat, i)=>{
+          return <p className='productos-totales__categorias' key={i}> {cat.desc.toUpperCase()} ({cat.total_productos})</p>
         })
         infCategory = <div className='categorias-container'>{catg}</div>
       }
 
     return (
       <React.Fragment>
-        <div className='productos-totales'>{infPoduct}</div>
+        <div className='productos-totales'>{infProduct}</div>
 
         <div className="categorias-totales">
           <h2>Categorias ({catTotal}): </h2>
