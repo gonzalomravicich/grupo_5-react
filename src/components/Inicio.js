@@ -58,13 +58,11 @@ function Inicio(){
         infUser = <div> Cargando... <p className='cargando-logo'></p></div>
       } else {
         infUser = <div className='ultimo-usuario'>
-          <h2>Ultimo usuario</h2>
-          <div className='ultimo-usuario__img-container'><img  src={user.imageProfile} ></img></div>
           <div> 
-            <p >{user.firstName.toUpperCase()} </p>
-            <p >{user.lastName.toUpperCase()} </p>
-            <p >{user.email}</p>
+            <h2>Nuevo usuario   </h2>
+            <p >{user.firstName.toUpperCase()} {user.lastName.toUpperCase()} </p>
           </div>
+          <div className='ultimo-usuario__img-container'><img  src={user.imageProfile} ></img></div>
         </div>
       }
 
