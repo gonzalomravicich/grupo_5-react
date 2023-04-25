@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react';
 
 function Inicio(){
     const [products, setProducts] = useState(""); 
+    const [user, setUser] = useState(""); 
 
     const buscarProduct = () => {
         fetch("http://localhost:3000/api/product/allProducts")
@@ -15,9 +16,21 @@ function Inicio(){
         })
       }
 
+      const buscarUser = () => {
+        fetch("http://localhost:3000/api/user/allUsers")
+        .then(response => (response.json()))
+        .then(data => {
+          setUser(data.data[data.data.length - 1])
+        })
+        .catch(error => {
+          console.log(error)
+        })
+    }    
+
       useEffect(() => {
         console.log("Componente montado");
         buscarProduct();
+        buscarUser();
       }, [])
 
       let infProduct;
@@ -40,11 +53,26 @@ function Inicio(){
             </div>
       }
 
+      let infUser;
+      if(user === "") {
+        infUser = <div> Cargando... <p className='cargando-logo'></p></div>
+      } else {
+        infUser = <div className='ultimo-usuario'>
+          <h2>Ultimo usuario</h2>
+          <div className='ultimo-usuario__img-container'><img  src={user.imageProfile} ></img></div>
+          <div> 
+            <p >{user.firstName.toUpperCase()} </p>
+            <p >{user.lastName.toUpperCase()} </p>
+            <p >{user.email}</p>
+          </div>
+        </div>
+      }
+
     return (
         <React.Fragment>
             
             {infProduct}
-            
+            {infUser}
         </React.Fragment>
     )
 }
